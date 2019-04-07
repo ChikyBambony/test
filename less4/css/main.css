@@ -1,0 +1,225 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body, header, div, a, p, input, button, ul, li {
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+}
+header {
+	background: rgba(77,189,254,1);
+	background: -moz-linear-gradient(left, rgba(77,189,254,1) 0%, rgba(55,144,217,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77,189,254,1)), color-stop(100%, rgba(55,144,217,1)));
+	background: -webkit-linear-gradient(left, rgba(77,189,254,1) 0%, rgba(55,144,217,1) 100%);
+	background: -o-linear-gradient(left, rgba(77,189,254,1) 0%, rgba(55,144,217,1) 100%);
+	background: -ms-linear-gradient(left, rgba(77,189,254,1) 0%, rgba(55,144,217,1) 100%);
+	background: linear-gradient(to right, rgba(77,189,254,1) 0%, rgba(55,144,217,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dbdfe', endColorstr='#3790d9', GradientType=1 );
+}
+
+.logo {
+	margin-top: 55px; 
+}
+
+.container {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.offer {
+	display: flex;
+	margin: 0 auto;
+}
+
+.textoffer {
+	font-family: 'Ubuntu', sans-serif;
+	color: #fff;
+	margin-top: 140px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+	font-size: 37px;
+}
+
+.text_bold {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 59px;
+}
+
+.text_h1 {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+button {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	background: #ffd429;
+	height: 55px;
+	width: 220px;
+	color: #2e2a1b;
+	border: 0;
+}
+
+.submit_one	{
+	margin-bottom: 215px;
+}
+
+.lableoffer {
+	padding: 0px;
+	margin: 0px;
+	width: 641px;
+	height: 641px;
+}
+
+.future {
+	background: #fff;
+	margin-top: 100px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	margin-bottom: 60px;
+}
+
+.h3_heading	{
+	display: flex;
+}
+
+h3 {
+	font-size: 19px;
+}
+
+.h3_travel {
+	text-align: center;
+}
+
+.h3_heading p {
+	font-size: 15px;
+	margin-bottom: 115px;
+}
+
+.h3_future, .h3_travel {
+	padding: 0;
+	margin-right: 180px;
+}
+
+.freetime, .travel, .create {
+ 	height: 68px;
+ 	margin-bottom: 20px;
+ 	box-sizing: border-box;
+}
+
+.form	{
+background: #ecf3f8;
+text-align: center;
+}
+
+.h2_form {
+	padding-top: 90px;
+	margin-bottom: 60px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.submit_two {
+	width: 340px;
+}
+
+.form_input {
+	border: 1px color #bbb;
+	height: 50px;
+	width: 340px;
+	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
+footer {
+
+	background: #164d7a;
+}
+
+.p_footer {
+	margin: 0;
+ 	padding: 60px 0px;
+ 	color: #fff;
+ 	text-align: center;
+}
+
+.input {
+	padding-bottom: 115px;
+}
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 720px;
+	}
+	.header {
+		flex-direction: column;
+	}
+	.offer {
+		width: 100%;
+	}
+	.text_h1 {
+		width: auto;
+	}
+	.lableoffer {
+		display: block;
+	    width: 549px;
+	    margin: 72px auto 0;
+	}
+	.skills {
+		flex-direction: column;
+	}
+	.skill {
+		width: auto;
+		margin-bottom: 30px;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+	.desktop {
+		width: 100%;
+	}
+	.input {
+		width: 100%;
+	}
+	.btn {
+		margin-left: 0;
+	    margin-top: 15px;
+	    width: 100%;
+	}
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+}
