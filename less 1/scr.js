@@ -4,7 +4,7 @@ function start () {
     money = +prompt ( "Ваш бюджет на месяц?", "$$");
     time = prompt ("Введите дату", "YYYY-MM-DD" );
 
-    while (isNaN(money) || money = "" || money == null) {
+    while (isNaN(money) || money == "" || money == null) {
         money = +prompt ( "Ваш бюджет на месяц?", "$$");
     }
 }
@@ -45,3 +45,14 @@ if ( appData.moneyPerDay < 100) {
 } else {
      console.log("Ошибка");
 }  
+
+function checkSavings () {
+    if (appData.savings == true) {
+        let save = +prompt("Какова сумма накоплений?"),
+            percent = +prompt ("Под какой процент?");
+        
+        appData.monthIncome = save/100/12*percent;
+        alert ("Доход в месяц с вашего депозита: " + appData.monthIncome);    
+    }
+}
+checkSavings();
