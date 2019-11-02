@@ -2,7 +2,7 @@ let money, time;
 
 function start () {
     money = +prompt ( "Ваш бюджет на месяц?", "$$");
-    time = prompt ("Введите дату", "YYYY-MM-DD" );
+    time = prompt ("Введите дату YYYY-MM-DD", "");
 
     while (isNaN(money) || money == "" || money == null) {
         money = +prompt ( "Ваш бюджет на месяц?", "$$");
@@ -16,7 +16,8 @@ let appData = {
     expenses: {},
     optionalExpenses: {},
     income: [],
-    savings: false
+    savings: false, 
+
 };
 
 function chooseExpenses() {
@@ -24,27 +25,33 @@ function chooseExpenses() {
         let a = prompt ("Введите обязательную статью расходов в этом месяце", ""),
             b = prompt (" Во сколько обойдется?", "$$");
         if ( typeof(a) === "string" && (typeof(a)) != null && (typeof(b)) != null 
-            && a != '' && b != '' (typeof(b))  ) {
+            && a != '' && b != '' && a.length < 50) {
             console.log(typeof(b));
             appData.expenses[a] = b;   
         } else {
-            i--
-        }   
+            i--;
+        }           
     };
 }
 
-appData.moneyPerDay = (appData.budget / 30).toFixed();
-alert ("Ежедневный бюджет: " + appData.moneyPerDay);
+chooseExpenses();
 
-if ( appData.moneyPerDay < 100) {
-    console.log("Минимальный уровень");
-} else if ( appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ) {
-    console.log("Средний уровень");
-} else if ( appData.moneyPerDay > 2000 ) {
-    console.log("Высокий уровень");
-} else {
-     console.log("Ошибка");
-}  
+function detectDayBudget () {
+    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert ("Ежедневный бюджет: " + appData.moneyPerDay);
+}
+
+function detectLevel() {
+    if ( appData.moneyPerDay < 100) {
+        console.log("Минимальный уровень");
+    } else if ( appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ) {
+        console.log("Средний уровень");
+    } else if ( appData.moneyPerDay > 2000 ) {
+        console.log("Высокий уровень");
+    } else {
+        console.log("Ошибка");
+    }  
+}
 
 function checkSavings () {
     if (appData.savings == true) {
@@ -56,3 +63,13 @@ function checkSavings () {
     }
 }
 checkSavings();
+
+function chooseOptExpenses() {
+    for (let count = 1; count <= 3; count++) {
+        let article = prompt('Статья необязательных расходов ', '');
+        appData.optionalExpenses[count] = article;
+        console.log(appData.optionalExpenses);
+    }
+}
+
+chooseOptExpenses();
